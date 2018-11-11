@@ -1,0 +1,11 @@
+Source: kuznyechik-kernel
+Maintainer: Vlasta Vesely <vlastavesely@protonmail.ch>
+Section: kernel
+Priority: optional
+Standards-Version: 3.9.8
+Build-Depends: debhelper (>= 9), dkms
+
+Package: kuznyechik-kernel
+Architecture: all
+Depends: ${misc:Depends}
+Description: GOST R 34.12-2015 encryption algorithms modules for Linux kernel

@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+
+VERSION ?= $$(dpkg-parsechangelog --show-field Version | sed -Ee 's/-[0-9]+$$//')
+DESTDIR := $$(pwd)/debian/kuznyechik-kernel/usr/src/kuznyechik-kernel-$(VERSION)
+
+%:
+	dh $@ --with dkms
+
+override_dh_auto_install:
+	mkdir -p $(DESTDIR)
+	install -m 0644 Makefile $(DESTDIR)
+	install -m 0644 kuznyechik.c $(DESTDIR)
+	install -m 0644 magma.c $(DESTDIR)
+
+override_dh_dkms:
+	dh_dkms -V

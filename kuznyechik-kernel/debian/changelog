@@ -1,3 +1,9 @@
+kuznyechik-kernel (0~20190131-1) stable; urgency=medium
+
+  * New stable release.
+
+ -- Vlasta Vesely <vlastavesely@protonmail.ch>  Thu, 31 Jan 2019 09:43:44 +0100
+
 kuznyechik-kernel (0~20181106-1) UNRELEASED; urgency=medium
 
   * Initial release.
